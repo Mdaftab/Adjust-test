@@ -16,8 +16,11 @@ Solution: I have written a shell script file that you need to run with the below
 ####### Run the following command step by step to Clone the GitHub Repository and execute shell script ####
 
 $git clone https://github.com/Mdaftab/Adjust-test.git
+
 $cd Adjust-test/
+
 $chmod +x testscript.sh
+
 $. testscript.sh 
 
 when you run the script it will give you the random number from 1-10. 
@@ -54,14 +57,17 @@ There are 3 main components I would like to monitor in this particular case alon
 
 
 Transactions Per second :
+
 Memory allocation for a Service Engine, which primarily impacts the number of concurrent connections, can be anywhere between 1 and 128 GB. As a general rule of thumb, SSL connections consume about twice as much memory as HTTP layer 7 connections, and four times as much memory as layer 4 with TCP proxy.
 
 Bulk Throughput:
+
 The maximum throughput for an SSL terminated virtual service depends on CPU as well as the NIC. 
 Using multiple NICs for client and server traffic can reduce the possibility of congestion or NIC saturation.  The maximum packets per second for virtualized environments vary dramatically and will be the same limit regardless if the traffic is SSL or unencrypted HTTP.  For best throughput, I would recommend bare metal or Linux cloud servers with Intel NICs capable of DPDK.
 
 
 Concurrent Connection:
+
 Often overlooked when capacity planning for SSL is the impact on concurrent connections. Often administrators hear numbers of tens of millions of concurrent numbers achieved by a load balancer, so no further attention is paid to this metric. The concurrent benchmark numbers floating around are generally for layer 4 in a pass-through, or non-proxy mode. In other words, they are many orders of magnitude greater than what will be achieved. As a rough yet conservative estimate, assume 40kB of memory per SSL terminated connection in the real world. The amount of HTTP header buffering, caching, compression, and other features play a role in the final number. including methods for optimizing for greater concurrency.
 
 

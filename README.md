@@ -8,7 +8,10 @@
          
          Solution: I have write a shell script file that you need to run with the below command on your terminal this script will run on Mac and Linux both machine. 
          
-         # Command to run the shell script. 
+                                             # Step to run the shell script. 
+          ####### Clone the github Repository #
+         $git clone https://github.com/Mdaftab/Adjust-test.git
+         $cd Adjust-test/
          $chmod +x testscript.sh
          $. testscript.sh 
          

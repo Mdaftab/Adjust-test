@@ -13,7 +13,8 @@
           
           
           
-          ####### Clone the github Repository #
+            ####### Run the following command step by step to Clone the github Repository and execute shell script ####
+            
          $git clone https://github.com/Mdaftab/Adjust-test.git
          $cd Adjust-test/
          $chmod +x testscript.sh

@@ -24,3 +24,24 @@
          
          
          
+         Qestion 2. Imagine a server with the following specs:
+
+              - 4 times Intel(R) Xeon(R) CPU E7-4830 v4 @ 2.00GHz
+
+              - 64GB of ram
+
+              - 2 tb HDD disk space
+
+              - 2 x 10Gbit/s nics
+
+The server is used for SSL offloading and proxies around 25000 requests per second.
+Please let us know which metrics are interesting to monitor in that specific case and how would you do that?  What are the challenges of monitoring this?
+
+
+         Solution:
+         
+         Why we do SSL Offloading
+The web request is sent by the User (Browser) via SSL protocol to the Load Balancer or SSL Offloader server, the connection created between User and SSL Offloader is in encrypted form. SSL Offloader takes care of encryption and decryption of data and sends plain requests to Web Servers attached behind in the same private network. Offloading or moving the burden from the web server’s and takes care of all encryption and decryption, this can largely boost up the performance of the web server, a high number of requests can be processed concurrently with very low CPU usage.
+         
+         
+         
